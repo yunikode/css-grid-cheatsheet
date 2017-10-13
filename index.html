@@ -8,16 +8,20 @@
   <title>CSS grid</title>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Overpass+Mono" rel="stylesheet">
   <link rel="stylesheet" href="css/set_reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/css-grid-cheat.css">
 
 </head>
 
 <body>
   <nav><a href="/">home</a></nav>
 
-<section>
-  <h1 class="title">CSS Grid Cheatsheet</h1>
-</section>
+  <section class="warning small-display">
+    <h1 class="title">live layout for desktop, will not work properly for mobile!</h1>
+  </section>
+
+  <section>
+    <h1 class="title">CSS Grid Cheatsheet</h1>
+  </section>
 
   <section>
     <h1>Gaps in the grid</h1>
@@ -96,9 +100,12 @@
       }
     </code></pre>
 
+    <h2>Bring in the media</h2>
+
     <div class="grid grid2_3">
       <div>Lorem ipsum dolor sit.</div>
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dignissimos placeat minima dicta consequatur aut officia veniam et, quasi voluptates velit, corporis eligendi illum repudiandae facilis ratione totam ea maiores. Assumenda incidunt voluptatem deleniti rerum facere obcaecati magnam repellat neque!</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dignissimos placeat minima dicta consequatur aut officia veniam et, quasi voluptates velit, corporis eligendi illum repudiandae facilis ratione totam ea maiores. Assumenda incidunt voluptatem
+        deleniti rerum facere obcaecati magnam repellat neque!</div>
       <div>Quae magni laboriosam sapiente.</div>
       <div>Repudiandae cumque, amet in.</div>
       <div>Eveniet, laborum mollitia! Cum.</div>
@@ -112,12 +119,19 @@
         grid-template-columns: repeat(3, 1fr 2fr);
         grid-auto-rows: minmax(150px, auto)
       }
+
+      @media (max-width: 50em) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr 2fr);
+        }
+      }
     </code></pre>
 
   </section>
 
   <section>
     <h1>Justify the Alignments</h1>
+    <p>grid setup as 1fr 2fr 1fr</p>
     <div class="grid grid3_1">
       <div class="box">Lorem ipsum dolor sit.</div>
       <div class="box">Quae magni laboriosam sapiente.</div>
@@ -326,9 +340,9 @@
 
   </section>
 
-<footer>
-&copy; Franz Lutzenberger 2017
-</footer>
+  <footer>
+    &copy; Franz Lutzenberger 2017
+  </footer>
 
 </body>
 
